@@ -1,0 +1,50 @@
+.content{
+    background-color: #F1ECE7;
+}
+
+.stamp-form__inner{
+    display: flex;
+    justify-content: center;
+    margin-top: 48px;
+}
+
+.stamp-form__form{
+    padding: 64px 96px;
+    width: 40vw;
+    border: 1px solid black;
+    border-radius: 8px;
+    background-color: #FDFEFE;
+}
+
+@media screen and (max-width: 1200px){
+    .stamp-form__form{
+        width: 60vw;
+    }
+}
+
+.wrap {
+    display: flex;
+    flex-wrap: wrap;
+    width: 1200px;
+    height:400px;
+    justify-content: center;
+}
+
+.item {
+    padding: 20px;
+    margin-top: 30px;
+    margin-right: 30px;
+    margin-left: 30px;
+    width: 500px;
+    background-color: #fff;
+}
+
+.btn{
+    font-size: 24px;
+    text-align: right;
+    margin-top: 40px;
+    margin-left: 140px;
+}
+
+
+
