@@ -16,9 +16,9 @@
             @csrf
             <h1 class="header__heading">Atte</h1>
             <div class="header-links">
-                <a href="/">ホーム</a>
-                <a href="/date-list">日付一覧</a>
-                <a href="/logout">ログアウト</a>
+                <button type="submit">ホーム</button>
+                <button type="submit">日付一覧</button>
+                <button type="submit">ログアウト</button>
             </div>
             @yield('link')
         </form>
