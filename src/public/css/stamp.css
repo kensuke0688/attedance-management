@@ -39,11 +39,11 @@
     background-color: #fff;
 }
 
-.btn{
+.content__inner-item {
     font-size: 24px;
-    text-align: right;
-    margin-top: 40px;
-    margin-left: 140px;
+    text-align: center;
+    margin-top: 50px;
+    margin-left: 170px;
 }
 
 
