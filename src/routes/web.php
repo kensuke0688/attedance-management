@@ -12,5 +12,6 @@ Route::post('/register', [RegisteredUserController::class, 'store']);
 Route::post('/logout', [AuthenticatedSessionController::class, 'destroy']);
 
 Route::middleware('auth')->group(function () {
-    Route::get('/attendance', [AttendanceController::class, 'attendance']);
+    Route::get('/stamp', [StampController::class, 'stamp']);
+    Route::get('/attendance', [Attendance::class, 'attendance']);
 });
