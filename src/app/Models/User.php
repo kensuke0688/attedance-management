@@ -41,4 +41,15 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    /**
+     * Define the relationship with Attendance model.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function attendance()
+    {
+        // UserモデルとAttendanceモデルの1対多の関係を定義
+        return $this->hasMany(Attendance::class);
+    }
 }

@@ -1,47 +1,39 @@
-input,
-select{
-    border: 1px solid #E3DED9;
-    color: #8B7969;
+.content {
+    background-color: #F1ECE7;
 }
 
-.attendance__inner{
-    margin: 32px auto 0;
-    width: 84%;
+.attendance__inner {
+    margin: -250px auto 0;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    width: 90%;
+    border-top: solid 1px black;
+    border-bottom: solid 1px black;
+    border-collapse: collapse;
+    font-size: 16px;
 }
 
-.attendance-form{
+.attendance-form {
     display: flex;
     align-items: stretch;
     flex-wrap: wrap;
-
-    gap:24px;
+    gap: 24px;
 }
 
-.attendance__table{
-    margin-top: 16px;
+.attendance__table {
     width: 100%;
     border-collapse: collapse;
 }
 
-.attendance__row{
-    border: 1px solid #E0DFDE;
+.attendance__row {
+    border: none;
 }
 
-.attendance__label{
-    padding: 16px 8px;
+.attendance__label {
+    color: black;
+    font-size: 20px;
 }
 
-.attendance__label:first-of-type{
-    padding-left: 48px;
-}
-
-.attendance:last-of-type{
-    padding-right: 48px;
-}
-
-.attendance__label{
-    background-color: #8B7969;
-    color: #FFF;
-    text-align: left;
-    font-weight: 400;
+.attendance__data{
+    text-align: center;
 }

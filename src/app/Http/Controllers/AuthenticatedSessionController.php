@@ -4,6 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Laravel\Fortify\Http\Controllers\AuthenticatedSessionController as FortifyAuthenticatedSessionController;
+use Laravel\Fortify\Http\Requests\LoginRequest;
+use Illuminate\Support\Facades\Route; // RouteServiceProviderをインポート
+use App\Providers\RouteServiceProvider; // RouteServiceProviderをインポート
+use Illuminate\Support\Facades\Auth; // Authファサードをインポート
 
 class AuthenticatedSessionController extends FortifyAuthenticatedSessionController
 {
@@ -15,9 +19,15 @@ class AuthenticatedSessionController extends FortifyAuthenticatedSessionControll
      */
     public function store(LoginRequest $request)
     {
-    $request->authenticate();
-    
-    $request->session()->regenerate();
+        $credentials = $request->only('email', 'password');
 
-    return redirect()->intended(RouteServiceProvider::HOME);}
+        if (Auth::attempt($credentials)) {
+            $request->session()->regenerate();
+            return redirect()->intended(RouteServiceProvider::HOME);
+        }
+
+        return back()->withErrors([
+            'email' => 'The provided credentials do not match our records.',
+        ]);
     }
+}

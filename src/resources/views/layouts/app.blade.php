@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
-    
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,16 +8,17 @@
     <link rel="stylesheet" href="{{ asset('css/common.css')}}">
     @yield('css')
 </head>
-
 <body>
     <div class="app">
         <form class="form" action="/logout" method="post">
             @csrf
             <h1 class="header__heading">Atte</h1>
             <div class="header-links">
-                <button type="submit">ホーム</button>
-                <button type="submit">日付一覧</button>
+                @if(Auth::check())
+                <a href="{{ route('stamp') }}">ホーム</a>
+                <a href="{{ route('attendance.index') }}">日付一覧</a>
                 <button type="submit">ログアウト</button>
+                @endif
             </div>
             @yield('link')
         </form>
@@ -26,9 +26,8 @@
             @yield('content')
         </div>
     </div>
+    <footer class="footer">
+        <small>&copy; Atte, Inc. </small>
+    </footer>
 </body>
-<div class="footer">
-    <small>&copy; Atte,inc.</small>
-</div>
-
 </html>

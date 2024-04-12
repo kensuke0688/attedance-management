@@ -13,7 +13,7 @@
             <div class="login-form__group">
                 <label class="login-form__label" for="email"></label>
                 <input class="login-form__input" type="email" name="email" id="email" placeholder="メールアドレス">
-                <p class="register-form__error-message">
+                <p class="login-form__error-message">
                     @error('email')
                     {{$message}}
                     @enderror
@@ -22,7 +22,7 @@
             <div class="login-form__group">
                 <label class="login-form__label" for="password"></label>
                 <input class="login-form__input" type="password" name="password" id="password" placeholder="パスワード">
-                <p>
+                <p class="login-form__error-message">
                     @error('password')
                     {{$message}}
                     @enderror
